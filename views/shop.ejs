@@ -6,8 +6,8 @@
         <%- include('includes/navigation.ejs') %>
 
     <main>
-        <h1>My Products</h1>
-        <p>List of all the products...</p>
+        <h1>My wishes</h1>
+        <p>List of all the wishes...</p>
         
         <% if(products.length > 0) { %>
         <div class="grid">
@@ -20,11 +20,10 @@
                     <img src=<%= product.image %> alt="image">
                 </div>
                 <div class="card__content">
-                    <h2 class="product__price"><%= product.price %></h2>
-                    <p class="product__description">A very interesting book about so many even more interesting things!</p>
+                    <h2 class="product__price"><%= product.price %>€</h2>
+                    <p class="product__description"><%= product.description %></p>
                 </div>
                 <div class="card__actions">
-                    <button class="btn">Add to Cart</button>
                 </div>
             </article>
 
