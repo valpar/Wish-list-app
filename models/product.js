@@ -22,7 +22,7 @@ module.exports = class Product {
             if(!error){
                 products = JSON.parse(fileContent);
             }
-            products.push(this);
+            products.push(new Product(this.title, this.image, this.price));
 
             //saving products array in json format to the file
             fs.writeFile(dataPath, JSON.stringify(products), (error) => {
