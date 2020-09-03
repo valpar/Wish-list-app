@@ -5,8 +5,10 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports = class Product {
-    constructor(bookTitle){
-        this.title = bookTitle;
+    constructor(wishTitle, wishImage, wishPrice){
+        this.title = wishTitle;
+        this.image = wishImage,
+        this.price = wishPrice;
     }
 
     saveProduct() {
